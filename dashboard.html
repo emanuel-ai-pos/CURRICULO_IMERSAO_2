@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Movimentação de Estoque</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="header">
+      <div class="header-brand">
+        <div class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 5-6"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Movimentação de Estoque</h1>
+          <p class="header-sub">Análise mensal · Jan–Mai 2026</p>
+        </div>
+      </div>
+      <div class="header-meta">
+        <label class="btn-upload" for="csvUpload" title="Carregar outro CSV">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          Carregar CSV
+        </label>
+        <input type="file" id="csvUpload" accept=".csv" hidden>
+        <span class="badge badge-live">Dados atualizados</span>
+        <span class="file-name">movimentacao_estoque_ficticia.csv</span>
+      </div>
+    </header>
+
+    <section class="kpi-grid" id="kpiGrid" aria-label="Indicadores principais"></section>
+
+    <section class="charts-grid">
+      <article class="chart-card chart-card--wide">
+        <div class="chart-card-header">
+          <div>
+            <h2>Quantidade mensal</h2>
+            <p>Entradas vs saídas por mês (unidades)</p>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="chartQuantidade" aria-label="Gráfico de quantidade mensal"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card">
+        <div class="chart-card-header">
+          <div>
+            <h2>Total de movimentações</h2>
+            <p>Registros por mês</p>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="chartMovimentacoes" aria-label="Gráfico de movimentações mensais"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card">
+        <div class="chart-card-header">
+          <div>
+            <h2>Proporção geral</h2>
+            <p>Entradas vs saídas (quantidade)</p>
+          </div>
+        </div>
+        <div class="chart-wrap chart-wrap--donut">
+          <canvas id="chartProporcao" aria-label="Gráfico de proporção"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card chart-card--wide">
+        <div class="chart-card-header">
+          <div>
+            <h2>Valor movimentado</h2>
+            <p>Volume financeiro mensal (R$)</p>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="chartValor" aria-label="Gráfico de valor movimentado"></canvas>
+        </div>
+      </article>
+
+      <article class="chart-card chart-card--wide">
+        <div class="chart-card-header">
+          <div>
+            <h2>Saldo mensal</h2>
+            <p>Entradas − saídas por mês (unidades)</p>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <canvas id="chartSaldo" aria-label="Gráfico de saldo mensal"></canvas>
+        </div>
+      </article>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Resumo mensal</h2>
+        <p>Detalhamento consolidado por período</p>
+      </div>
+      <div class="table-wrap">
+        <table id="summaryTable">
+          <thead>
+            <tr>
+              <th>Mês</th>
+              <th>Movimentações</th>
+              <th>Entradas (un.)</th>
+              <th>Saídas (un.)</th>
+              <th>Saldo (un.)</th>
+              <th>Valor (R$)</th>
+            </tr>
+          </thead>
+          <tbody id="summaryBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

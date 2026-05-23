@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Rafael Mendes | LinkedIn</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar estilo LinkedIn -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Início">
+        <svg viewBox="0 0 24 24" width="34" height="34" fill="#0a66c2">
+          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h3v1.76c.79-.45 1.84-.72 2.94-.72 1.88 0 3.45 1.1 3.45 3.56V19z"/>
+        </svg>
+      </a>
+      <div class="nav-search">
+        <svg viewBox="0 0 16 16" width="16" height="16" fill="#666"><path d="M14.56 13.44l-3.37-3.37a5.5 5.5 0 10-.88.88l3.37 3.37a.63.63 0 10.88-.88zM6 10.5A4.5 4.5 0 116 1.5a4.5 4.5 0 010 9z"/></svg>
+        <input type="text" placeholder="Pesquisar" disabled>
+      </div>
+      <ul class="nav-links">
+        <li class="active">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 11 7z"/></svg>
+          <span>Início</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 0014 9.5v-1a6 6 0 00-6-6H6a6 6 0 00-6 6v1a3.5 3.5 0 003.5 3.5 3.5 3.5 0 003.5-3.5 3.5 3.5 0 003.5 3.5 3.5 3.5 0 003.5-3.5zM21 9v10h-6v-4.5a3 3 0 00-3-3h-2a3 3 0 00-3 3V19H3V9a3 3 0 013-3h12a3 3 0 013 3z"/></svg>
+          <span>Rede</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20 6h-4V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a1 1 0 00-1 1v11a3 3 0 003 3h12a3 3 0 003-3V7a1 1 0 00-1-1zM10 4h4v2h-4V4zm6 11H8v-5h8v5z"/></svg>
+          <span>Vagas</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M16 4H8a7 7 0 000 14h4v-4h4V4z"/><path d="M20.5 8v11a1.5 1.5 0 01-1.5 1.5H16V8h4.5zM8 2h8a2 2 0 012 2v12a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg>
+          <span>Mensagens</span>
+        </li>
+        <li class="nav-me">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=RafaelMendes&backgroundColor=b6e3ff" alt="">
+          <span>Eu</span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Layout principal -->
+  <div class="layout">
+
+    <!-- Coluna esquerda -->
+    <aside class="col-left">
+      <div class="card mini-profile">
+        <div class="mini-banner"></div>
+        <img class="mini-avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=RafaelMendes&backgroundColor=b6e3ff" alt="Dr. Rafael Mendes">
+        <h3>Dr. Rafael Mendes</h3>
+        <p class="mini-headline">Advogado — Direito Civil e Empresarial</p>
+        <hr>
+        <div class="mini-stat">
+          <span>Visualizações do perfil</span>
+          <strong>1.284</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Impressões da publicação</span>
+          <strong>432</strong>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4 class="card-sm-title">Idiomas</h4>
+        <canvas id="languagesChart" aria-label="Gráfico de idiomas"></canvas>
+        <div class="donut-legend" id="languagesLegend"></div>
+      </div>
+    </aside>
+
+    <!-- Coluna central -->
+    <main class="col-center">
+
+      <!-- Card de perfil -->
+      <section class="card profile-hero">
+        <div class="cover-photo"></div>
+        <div class="profile-hero-body">
+          <img class="hero-avatar" src="https://api.dicebear.com/7.x/avataaars/svg?seed=RafaelMendes&backgroundColor=b6e3ff" alt="Dr. Rafael Mendes">
+          <div class="hero-info">
+            <h1>Dr. Rafael Mendes</h1>
+            <p class="headline">Advogado Sênior | Direito Civil & Empresarial | OAB/SP</p>
+            <p class="location">
+              <svg viewBox="0 0 16 16" width="16" height="16" fill="#666"><path d="M8 1a5 5 0 00-5 5c0 3.5 5 9 5 9s5-5.5 5-9a5 5 0 00-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z"/></svg>
+              São Paulo, São Paulo, Brasil
+            </p>
+            <a href="#" class="link-contact">Informações de contato</a>
+            <p class="connections"><strong>500+</strong> conexões</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Conectar</button>
+              <button class="btn btn-outline">Mensagem</button>
+              <button class="btn btn-outline btn-icon" aria-label="Mais opções">···</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section class="card">
+        <h2 class="card-title">Sobre</h2>
+        <p class="about-text">
+          Advogado com mais de 8 anos de experiência em Direito Civil e Empresarial,
+          especializado em contratos comerciais, resolução de conflitos e consultoria
+          jurídica para empresas de médio e grande porte. Reconhecido pela capacidade
+          de traduzir complexidades legais em soluções práticas, com histórico comprovado
+          de sucesso em negociações e litígios estratégicos.
+        </p>
+      </section>
+
+      <!-- Experiência -->
+      <section class="card">
+        <h2 class="card-title">Experiência</h2>
+
+        <article class="timeline-item">
+          <div class="company-logo">M&A</div>
+          <div class="timeline-content">
+            <h3>Advogado Sênior — Direito Empresarial</h3>
+            <p class="company-name">Mendes & Associados Advocacia · Tempo integral</p>
+            <p class="period">mar de 2021 – o momento · 4 anos 3 meses</p>
+            <p class="location-sm">São Paulo, Brasil · Presencial</p>
+            <ul>
+              <li>Liderança de equipe com 5 advogados em contratos corporativos e M&A.</li>
+              <li>Redução de 35% no tempo médio de resolução de disputas contratuais.</li>
+              <li>Assessoria jurídica para mais de 40 empresas do setor de tecnologia.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="company-logo">SC</div>
+          <div class="timeline-content">
+            <h3>Advogado Pleno — Direito Civil</h3>
+            <p class="company-name">Silva, Costa & Partners · Tempo integral</p>
+            <p class="period">jan de 2018 – fev de 2021 · 3 anos 2 meses</p>
+            <p class="location-sm">São Paulo, Brasil</p>
+            <ul>
+              <li>Atuação em ações cíveis, indenizações e responsabilidade civil.</li>
+              <li>Taxa de êxito de 87% em processos de mediação e arbitragem.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="company-logo">TJ</div>
+          <div class="timeline-content">
+            <h3>Estagiário / Advogado Júnior</h3>
+            <p class="company-name">Tribunal de Justiça de São Paulo</p>
+            <p class="period">ago de 2016 – dez de 2017 · 1 ano 5 meses</p>
+            <ul>
+              <li>Apoio à magistratura em processos cíveis e empresariais.</li>
+              <li>Pesquisa jurisprudencial e elaboração de minutas de decisões.</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- Formação -->
+      <section class="card">
+        <h2 class="card-title">Formação acadêmica</h2>
+
+        <article class="timeline-item">
+          <div class="company-logo edu">FGV</div>
+          <div class="timeline-content">
+            <h3>Pós-Graduação, Direito Empresarial</h3>
+            <p class="company-name">FGV — Fundação Getulio Vargas</p>
+            <p class="period">2019 – 2020</p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="company-logo edu">USP</div>
+          <div class="timeline-content">
+            <h3>Bacharel em Direito</h3>
+            <p class="company-name">Universidade de São Paulo (USP)</p>
+            <p class="period">2014 – 2018</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Competências -->
+      <section class="card">
+        <h2 class="card-title">Competências</h2>
+
+        <div class="skill-pills" id="skillPills"></div>
+
+        <div class="skills-chart-section">
+          <h3 class="sub-title">Nível de proficiência</h3>
+          <div class="skills-bars" id="skillsBars"></div>
+        </div>
+
+        <div class="radar-section">
+          <h3 class="sub-title">Visão geral</h3>
+          <div class="radar-container">
+            <canvas id="skillsRadar" aria-label="Gráfico radar de competências"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Licenças e certificados -->
+      <section class="card">
+        <h2 class="card-title">Licenças e certificados</h2>
+
+        <article class="timeline-item cert">
+          <div class="cert-badge">⚖️</div>
+          <div class="timeline-content">
+            <h3>OAB/SP — Inscrição nº 345.678</h3>
+            <p class="company-name">Ordem dos Advogados do Brasil</p>
+            <p class="period">Emitida em jan de 2019</p>
+          </div>
+        </article>
+
+        <article class="timeline-item cert">
+          <div class="cert-badge">📜</div>
+          <div class="timeline-content">
+            <h3>Mediador Certificado</h3>
+            <p class="company-name">CNJ — Conselho Nacional de Justiça</p>
+            <p class="period">Emitida em mar de 2020</p>
+          </div>
+        </article>
+
+        <article class="timeline-item cert">
+          <div class="cert-badge">🌐</div>
+          <div class="timeline-content">
+            <h3>Compliance LGPD</h3>
+            <p class="company-name">Certificação em Proteção de Dados</p>
+            <p class="period">Emitida em jun de 2022</p>
+          </div>
+        </article>
+      </section>
+
+    </main>
+
+    <!-- Coluna direita -->
+    <aside class="col-right">
+      <div class="card">
+        <h4 class="card-sm-title">Informações de contato</h4>
+        <ul class="contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#666"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6" fill="none" stroke="#666" stroke-width="2"/></svg>
+            <span>rafael.mendes@advocacia.com.br</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#666"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" fill="none" stroke="#666" stroke-width="2"/></svg>
+            <span>(11) 98765-4321</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="#666"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71" fill="none" stroke="#666" stroke-width="2"/></svg>
+            <span>linkedin.com/in/rafaelmendes</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h4 class="card-sm-title">Análise do perfil</h4>
+        <div class="profile-stats">
+          <div class="stat-row">
+            <span>Força do perfil</span>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width: 85%"></div></div>
+            <strong>Alto</strong>
+          </div>
+          <div class="stat-row">
+            <span>Visibilidade de busca</span>
+            <div class="stat-bar"><div class="stat-bar-fill" style="width: 72%"></div></div>
+            <strong>Médio</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="card promo-card">
+        <p>Referências profissionais disponíveis mediante solicitação.</p>
+        <a href="#" class="link-promo">Solicitar referências →</a>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
